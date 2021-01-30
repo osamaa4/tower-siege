@@ -1,34 +1,41 @@
-var car,wall;
-var speed, weight;
-speed=random(55,90)
-weight=random(400,1500)
-wall=createSprite(1500,200, 60,height/2)
 
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+const Body = Matter.Body;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function preload()
+{
+	
+}
 
 function setup() {
-  createCanvas(800,400);
-  createSprite(400, 200, 50, 50);
+	createCanvas(800, 700);
+
+
+	engine = Engine.create();
+	world = engine.world;
+
+	//Create the Bodies Here.
+
+
+	Engine.run(engine);
+	var options=(
+		isStatic:false,
+		restitution:0,
+		friction:1,
+		density:1.2
+  
 }
+
 
 function draw() {
-  background(255,255,255);  
+  rectMode(CENTER);
+  background(0);
+  
   drawSprites();
-
+ 
 }
+
+
+
